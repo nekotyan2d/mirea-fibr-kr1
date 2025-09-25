@@ -1,0 +1,20 @@
+:root {
+    --color-background: #efefef;
+    --color-background-secondary: #fff;
+
+    --color-background-header: #10316a;
+    --color-background-footer: #001e52;
+
+    --color-text: #000;
+    --color-text-secondary: #4c4c4c;
+    --color-text-header: #fff;
+    --color-text-footer: #fff;
+
+    --color-accent: #005eff;
+    --color-accent-secondary: #083177;
+
+    --gap-normal: 16px;
+    --border-radius: 16px;
+    --padding-normal: 16px;
+    --padding-larger: 32px;
+}
