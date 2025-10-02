@@ -17,8 +17,12 @@ body {
     font-family: "Inter", sans-serif;
     min-height: 100vh;
     min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
 }
 
 a {
@@ -26,6 +30,22 @@ a {
 
     &:visited {
         color: var(--color-accent-secondary);
+    }
+}
+
+button {
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 1rem;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-accent-secondary);
     }
 }
 
@@ -41,6 +61,7 @@ img {
     height: 60px;
     display: flex;
     align-items: center;
+    grid-area: header;
 
     .app-header__nav {
         margin: 0 auto;
@@ -63,7 +84,7 @@ img {
 
 main {
     margin: var(--gap-normal) 0;
-    flex: 1;
+    grid-area: main;
 }
 
 .content {
@@ -72,6 +93,7 @@ main {
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 var(--padding-normal);
 
     .information {
         display: flex;
@@ -96,14 +118,17 @@ main {
     }
 
     .skills {
-        display: flex;
+        display: grid;
         gap: var(--gap-normal);
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        width: 100%;
 
         .skills__item {
             padding: var(--padding-normal);
             background-color: var(--color-accent);
             color: white;
             border-radius: 26px;
+            text-align: center;
 
             &:hover {
                 box-shadow: 0 0 8px 0px var(--color-accent);
@@ -130,8 +155,8 @@ main {
 
     .news {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: var(--gap-normal);
 
         .news__item {
@@ -148,12 +173,17 @@ main {
                 font-size: 0.9rem;
                 color: var(--color-text-secondary);
             }
+
+            .news__more {
+                text-decoration: none;
+                color: var(--color-accent);
+            }
         }
     }
 
     .goods {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: var(--gap-normal);
 
         .goods__item {
@@ -169,10 +199,13 @@ main {
                 margin-top: auto;
             }
             .goods__price {
-                margin: 0 var(--padding-normal) var(--padding-normal)
-                    var(--padding-normal);
+                margin: 0 var(--padding-normal) var(--padding-normal) var(--padding-normal);
                 color: var(--color-accent);
                 font-weight: bold;
+            }
+
+            .goods__add-to-cart {
+                margin: 0 var(--padding-smaller) var(--padding-smaller) var(--padding-smaller);
             }
         }
     }
@@ -182,8 +215,17 @@ main {
         flex-direction: column;
         gap: var(--gap-normal);
 
-        .card {
-            margin: 0;
+        .contacts__cards {
+            display: grid;
+            gap: var(--gap-normal);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            .contacts__item {
+                h3,
+                p {
+                    margin: 0;
+                }
+            }
         }
 
         .phone {
@@ -229,6 +271,7 @@ main {
     color: var(--color-text-footer);
     padding: var(--padding-normal);
     text-align: center;
+    grid-area: footer;
 
     .app-footer__nav {
         margin: 0 auto;
@@ -245,6 +288,24 @@ main {
                 color: inherit;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .app-header,
+    .app-footer {
+        text-align: center;
+        height: auto;
+        padding: var(--gap-normal);
+        .menu {
+            flex-direction: column;
+        }
+    }
+    .content {
+        .skills,
+        .goods {
+            grid-template-columns: 1fr;
         }
     }
 }

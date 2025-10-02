@@ -1,95 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Товары</title>
-        <link rel="stylesheet" href="../css/app.css" />
-    </head>
-    <body>
-        <header class="app-header">
-            <nav class="app-header__nav">
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a href="../index.html" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="../pages/news.html" class="menu__link"
-                            >Новости</a
-                        >
-                    </li>
-                    <li class="menu__item">
-                        <a href="../pages/practices.html" class="menu__link"
-                            >Практики</a
-                        >
-                    </li>
-                    <li class="menu__item">
-                        <a href="../pages/goods.html" class="menu__link"
-                            >Товары</a
-                        >
-                    </li>
-                    <li class="menu__item">
-                        <a href="../pages/contacts.html" class="menu__link"
-                            >Контакты</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="content">
-                <section class="goods">
-                    <div class="card goods__item">
-                        <div class="goods__image">
-                            <img src="../images/cat-photo1.jpg" alt="" />
-                        </div>
-                        <h3 class="goods__name">Сонный кот</h3>
-                        <div class="goods__price">0₽</div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары</title>
+    <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body>
+    <header class="app-header">
+        <nav class="app-header__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">Главная</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../pages/news.html" class="menu__link">Новости</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../pages/practices.html" class="menu__link">Практики</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../pages/goods.html" class="menu__link">Товары</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../pages/contacts.html" class="menu__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h2>Каталог товаров</h2>
+            <p>Мы предлагаем широкий ассортимент товаров</p>
+            <section class="goods">
+                <article class="card goods__item">
+                    <div class="goods__image">
+                        <img src="../images/cat-photo1.jpg" alt="" />
                     </div>
-                    <div class="card goods__item">
-                        <div class="goods__image">
-                            <img src="../images/cat-photo2.jpg" alt="" />
-                        </div>
-                        <h3 class="goods__name">Непонимающий кот</h3>
-                        <div class="goods__price">100₽</div>
+                    <h3 class="goods__name">Сонный кот</h3>
+                    <div class="goods__price">0₽</div>
+                    <button class="goods__add-to-cart">В корзину</button>
+                </article>
+                <article class="card goods__item">
+                    <div class="goods__image">
+                        <img src="../images/cat-photo2.jpg" alt="" />
                     </div>
-                    <div class="card goods__item">
-                        <div class="goods__image">
-                            <img src="../images/cat-photo3.jpg" alt="" />
-                        </div>
-                        <h3 class="goods__name">Шумный кот</h3>
-                        <div class="goods__price">50₽</div>
+                    <h3 class="goods__name">Непонимающий кот</h3>
+                    <div class="goods__price">100₽</div>
+                    <button class="goods__add-to-cart">В корзину</button>
+                </article>
+                <article class="card goods__item">
+                    <div class="goods__image">
+                        <img src="../images/cat-photo3.jpg" alt="" />
                     </div>
-                </section>
-            </div>
-        </main>
-        <footer class="app-footer">
-            <p>
-                Представьте, что здесь находится информативный текст для футера
-            </p>
-            <nav class="app-footer__nav">
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a href="index.html" class="menu__link">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="pages/news.html" class="menu__link">Новости</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="pages/practices.html" class="menu__link"
-                            >Практики</a
-                        >
-                    </li>
-                    <li class="menu__item">
-                        <a href="pages/goods.html" class="menu__link">Товары</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="pages/contacts.html" class="menu__link"
-                            >Контакты</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </body>
+                    <h3 class="goods__name">Шумный кот</h3>
+                    <div class="goods__price">50₽</div>
+                    <button class="goods__add-to-cart">В корзину</button>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="app-footer">
+        <p>
+            Представьте, что здесь находится информативный текст для футера
+        </p>
+        <nav class="app-footer__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link">Главная</a>
+                </li>
+                <li class="menu__item">
+                    <a href="news.html" class="menu__link">Новости</a>
+                </li>
+                <li class="menu__item">
+                    <a href="practices.html" class="menu__link">Практики</a>
+                </li>
+                <li class="menu__item">
+                    <a href="goods.html" class="menu__link">Товары</a>
+                </li>
+                <li class="menu__item">
+                    <a href="contacts.html" class="menu__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
 </html>
