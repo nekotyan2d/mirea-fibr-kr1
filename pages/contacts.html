@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
     <link rel="stylesheet" href="../css/app.css" />
+    <script type="text/javascript" src="../js/contacts.js" defer></script>
 </head>
 
 <body>
@@ -44,8 +45,39 @@
                         <p class="contacts__text">г. Сыктывкар, ул. Рандомная, д. 1</p>
                     </article>
                 </div>
-
-                <a class="phone" href="tel:555-555-5555">Позвоните мне</a>
+                <button id="contactUs">Связаться с нами</button>
+                <dialog id="contactUsDialog">
+                    <h2>Обратная связь</h2>
+                    <button class="close" id="closeDialogBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
+                            fill="none">
+                            <path
+                                d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                                fill="#0F0F0F" />
+                        </svg>
+                    </button>
+                    <form class="contact-us-form" id="contactUsForm">
+                        <label for="input-name">Имя<span class="required">*</span></label>
+                        <input type="text" id="input-name" name="name" placeholder="Имя" required>
+                        <label for="input-phone">Телефон<span class="required">*</span></label>
+                        <input type="text" id="input-phone" name="phone" placeholder="Телефон" required>
+                        <label for="input-email">Почта<span class="required">*</span></label>
+                        <input type="email" id="input-email" name="email" placeholder="Почта" required>
+                        <label for="input-category">Категория обращения<span class="required">*</span></label>
+                        <select type="email" id="input-category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="Техническая поддержка">Техническая поддержка</option>
+                            <option value="Коммерческое предложение">Коммерческое предложение</option>
+                            <option value="Сотрудничество">Сотрудничество</option>
+                            <option value="Жалоба">Жалоба</option>
+                            <option value="Предложение">Предложение</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                        <label for="input-message">Текст обращения<span class="required">*</span></label>
+                        <textarea id="input-message" name="message" placeholder="Текст обращения" required></textarea>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </dialog>
             </section>
         </div>
     </main>

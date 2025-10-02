@@ -265,6 +265,53 @@ main {
     box-shadow: 0 0 10px 0px rgb(209 209 209 / 50%);
 }
 
+dialog {
+    border-radius: var(--border-radius);
+    border: none;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .close {
+        background: none;
+        position: absolute;
+        top: var(--padding-normal);
+        right: var(--padding-normal);
+    }
+}
+
+input,
+select {
+    border-radius: var(--border-radius);
+    outline: none;
+    height: 50px;
+    padding: 0 var(--padding-smaller);
+    border: 1.5px solid #757575;
+}
+
+textarea {
+    border-radius: var(--border-radius);
+    padding: var(--padding-smaller);
+    font-family: "Inter", sans-serif;
+    border: 1.5px solid #757575;
+    height: auto;
+    resize: none;
+}
+
+span.required {
+    color: red;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-normal);
+}
+
 .app-footer {
     width: 100%;
     background-color: var(--color-background-footer);
