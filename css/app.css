@@ -117,38 +117,58 @@ main {
         }
     }
 
-    .skills {
-        display: grid;
-        gap: var(--gap-normal);
-        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    .skills-section {
         width: 100%;
+        .skills {
+            display: grid;
+            gap: var(--gap-normal);
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
 
-        .skills__item {
-            padding: var(--padding-normal);
-            background-color: var(--color-accent);
-            color: white;
-            border-radius: 26px;
-            text-align: center;
+            .skills__item {
+                --skill-color: var(--color-accent);
+                padding: var(--padding-normal);
+                background-color: var(--skill-color);
+                color: white;
+                border-radius: 26px;
+                text-align: center;
 
-            &:hover {
-                box-shadow: 0 0 8px 0px var(--color-accent);
+                &:hover {
+                    box-shadow: 0 0 8px 0px var(--skill-color);
+                }
+            }
+
+            .skills__item--vue {
+                --skill-color: #42b883;
+            }
+            .skills__item--nuxt {
+                --skill-color: #00c58e;
+            }
+            .skills__item--sass {
+                --skill-color: #cc6699;
+            }
+            .skills__item--typescript {
+                --skill-color: #3178c6;
             }
         }
     }
 
-    .experience {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-normal);
+    .project-section {
         width: 100%;
 
-        .experience__item {
-            .experience__title {
-                margin: 0;
-            }
+        .projects {
+            display: grid;
+            gap: var(--gap-normal);
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
 
-            .experience__content {
-                margin: 0;
+            .project__item {
+                .project__title {
+                    margin: 0;
+                }
+
+                .project__content {
+                    margin: 0;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -350,7 +370,12 @@ span.required {
         }
     }
     .content {
-        .skills,
+        .skills-section .skills {
+            grid-template-columns: 1fr;
+        }
+        .project-section .projects {
+            grid-template-columns: 1fr;
+        }
         .goods {
             grid-template-columns: 1fr;
         }
