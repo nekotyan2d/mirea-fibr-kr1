@@ -6,83 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
     <link rel="stylesheet" href="css/app.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-    <header class="app-header">
-        <nav class="app-header__nav">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="index.html" class="menu__link">Главная</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/news.html" class="menu__link">Новости</a>
-                </li>
-                <li class="menu__item">
-                    <a href="../pages/practices.html" class="menu__link">Практики</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/goods.html" class="menu__link">Товары</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/contacts.html" class="menu__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="content">
-            <section class="information">
-                <h2>Информация об авторе</h2>
-                <div class="avatar">
-                    <img src="images/avatar.png" alt="" width="200" height="200" />
+<body class="bg-body-secondary">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h3">Мое портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class="col-auto">
+                        <div class="badge text-primary bg-light">ЭФБО-05-24</div>
+                    </div>
                 </div>
-                <h3 class="name">Рычажков Дмитрий Андреевич</h3>
-                <div class="group">ЭФБО-05-24</div>
-            </section>
-            <section class="about-section">
-                <h4>Обо мне</h4>
-                <p class="card about-me">
-                    Попрогал - надоело. Поиграл в игры после того, как
-                    прогать надоело. Надоело. Попрогал, потому что надоело
-                    играть после того, как прогал. To be continued...
-                </p>
-            </section>
-            <section class="skills-section">
-                <h4>Мои навыки</h4>
-                <div class="skills">
-                    <div class="skills__item skills__item--vue">Vue</div>
-                    <div class="skills__item skills__item--nuxt">Nuxt</div>
-                    <div class="skills__item skills__item--sass">Sass</div>
-                    <div class="skills__item skills__item--typescript">Typescript</div>
-                </div>
-            </section>
-
-            <section class="project-section">
-                <h4>Мои проекты</h4>
-                <div class="projects">
-                    <article class="card project__item">
-                        <h4 class="project__title">Личный сайт</h4>
-                        <p class="project__content">
-                            Сайт на котором вы сейчас находитесь. Сделан на HTML, CSS
-                        </p>
-                    </article>
-                    <article class="card project__item">
-                        <h4 class="project__title">Реальные новости</h4>
-                        <p class="project__content">
-                            Новостной бот в телеграме, который постит только реальные новости
-                        </p>
-                    </article>
-                    <article class="card project__item">
-                        <h4 class="project__title">Ryhux</h4>
-                        <p class="project__content">
-                            Социальная сеть на минималках на Nuxt, PHP и MySQL
-                        </p>
-                    </article>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active text-white opacity-75">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/news.html" class="nav-link text-white">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/practices.html" class="nav-link text-white">Практики</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/goods.html" class="nav-link text-white">Товары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/contacts.html" class="nav-link text-white">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main class="container my-8">
+        <section class="mb-8">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-md-0">
+                            <img class="img-fluid rounded-circle" src="images/avatar.png" alt="" style="width: 150px; height: 150px; object-fit:
+cover;" />
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="card-title h4">Рычажков Дмитрий Андреевич</h2>
+                            <p class="card-text text-muted">
+                                <i class="bi bi-bookmark"></i> Студент группы ЭФБО-05-24
+                            </p>
+                            <p class="card-text">Факультет информационных технологий, специальность
+                                "Фуллстек-разработка"</p>
+                            <div class="d-flex align-items-center flex-wrap gap-2">
+                                <div class="badge bg-warning">HTML/CSS</div>
+                                <div class="badge bg-success">Vue</div>
+                                <div class="badge bg-primary">Typescript</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </section>
-        </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <h4>Обо мне</h4>
+            <p class="card about-me">
+                Попрогал - надоело. Поиграл в игры после того, как
+                прогать надоело. Надоело. Попрогал, потому что надоело
+                играть после того, как прогал. To be continued...
+            </p>
+        </section>
+        <section class="skills-section">
+            <h4>Мои навыки</h4>
+            <div class="skills">
+                <div class="skills__item skills__item--vue">Vue</div>
+                <div class="skills__item skills__item--nuxt">Nuxt</div>
+                <div class="skills__item skills__item--sass">Sass</div>
+                <div class="skills__item skills__item--typescript">Typescript</div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h4>Мои проекты</h4>
+            <div class="projects">
+                <article class="card project__item">
+                    <h4 class="project__title">Личный сайт</h4>
+                    <p class="project__content">
+                        Сайт на котором вы сейчас находитесь. Сделан на HTML, CSS
+                    </p>
+                </article>
+                <article class="card project__item">
+                    <h4 class="project__title">Реальные новости</h4>
+                    <p class="project__content">
+                        Новостной бот в телеграме, который постит только реальные новости
+                    </p>
+                </article>
+                <article class="card project__item">
+                    <h4 class="project__title">Ryhux</h4>
+                    <p class="project__content">
+                        Социальная сеть на минималках на Nuxt, PHP и MySQL
+                    </p>
+                </article>
+            </div>
+
+        </section>
     </main>
     <footer class="app-footer">
         <p>
