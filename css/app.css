@@ -108,6 +108,7 @@ span.required {
     display: flex;
     align-items: center;
     grid-area: header;
+    position: relative;
 
     .app-header__nav {
         margin: 0 auto;
@@ -366,6 +367,26 @@ main {
             }
         }
     }
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+    color: var(--color-text-header);
+}
+
+.theme-dark .theme-switcher .dark {
+    display: none;
+}
+
+.theme-light .theme-switcher .light {
+    display: none;
 }
 
 @media screen and (max-width: 500px) {
