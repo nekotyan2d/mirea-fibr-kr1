@@ -5,125 +5,203 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Семестровая работа</title>
-    <link rel="stylesheet" href="css/app.css" />
+    <!-- <link rel="stylesheet" href="css/app.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script type="text/javascript" src="../js/app.js" defer></script>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
 </head>
 
-<body>
-    <header class="app-header">
-        <nav class="app-header__nav">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="index.html" class="menu__link">Главная</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/news.html" class="menu__link">Новости</a>
-                </li>
-                <li class="menu__item">
-                    <a href="../pages/practices.html" class="menu__link">Практики</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/goods.html" class="menu__link">Товары</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/contacts.html" class="menu__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="content">
-            <section class="information">
-                <h2>Информация об авторе</h2>
-                <div class="avatar">
-                    <img src="images/avatar.png" alt="" width="200" height="200" />
+<body class="bg-body-secondary">
+    <div class="container-fluid p-0 mb-2">
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h3">Мое портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class="col-auto">
+                        <div class="badge text-primary bg-light">ЭФБО-05-24</div>
+                        <button class="theme-switcher">
+                            <div class="dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 21q-3.75 0-6.375-2.625T3 12t2.625-6.375T12 3q.35 0 .688.025t.662.075q-1.025.725-1.638 1.888T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q1.375 0 2.525-.613T20.9 10.65q.05.325.075.662T21 12q0 3.75-2.625 6.375T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75" />
+                                </svg>
+                            </div>
+                            <div class="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12 15q1.25 0 2.125-.875T15 12t-.875-2.125T12 9t-2.125.875T9 12t.875 2.125T12 15m0 2q-2.075 0-3.537-1.463T7 12t1.463-3.537T12 7t3.538 1.463T17 12t-1.463 3.538T12 17m-7-4H1v-2h4zm18 0h-4v-2h4zM11 5V1h2v4zm0 18v-4h2v4zM6.4 7.75L3.875 5.325L5.3 3.85l2.4 2.5zm12.3 12.4l-2.425-2.525L17.6 16.25l2.525 2.425zM16.25 6.4l2.425-2.525L20.15 5.3l-2.5 2.4zM3.85 18.7l2.525-2.425L7.75 17.6l-2.425 2.525zM12 12" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
                 </div>
-                <h3 class="name">Рычажков Дмитрий Андреевич</h3>
-                <div class="group">ЭФБО-05-24</div>
-                <p class="card about-me">
-                    Попрогал - надоело. Поиграл в игры после того, как
-                    прогать надоело. Надоело. Попрогал, потому что надоело
-                    играть после того, как прогал. To be continued...
-                </p>
-            </section>
-            <section class="skills">
-                <div class="skills__item">Vue</div>
-                <div class="skills__item">Nuxt</div>
-                <div class="skills__item">Sass</div>
-                <div class="skills__item">Typescript</div>
-            </section>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active text-white opacity-75">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/news.html" class="nav-link text-white">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/practices.html" class="nav-link text-white">Практики</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/goods.html" class="nav-link text-white">Товары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/contacts.html" class="nav-link text-white">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <main class="container my-8">
+        <section class="mb-8">
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center">
+                        <img class="img-fluid rounded-circle" src="images/avatar.png" alt="" style="width: 150px; height: 150px; object-fit:
+                        cover;" />
+                        <h2 class="card-title h4">Рычажков Дмитрий Андреевич</h2>
+                        <p class="card-text text-muted">
+                            <i class="bi bi-bookmark"></i> Студент группы ЭФБО-05-24
+                        </p>
+                        <p class="card-text">Факультет информационных технологий, специальность
+                            "Фуллстек-разработка"</p>
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <div class="badge bg-warning">HTML/CSS</div>
+                            <div class="badge bg-success">Vue</div>
+                            <div class="badge bg-primary">Typescript</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="card p-0 mt-2">
+                <div class="card-header">
+                    <h4 class="card-title"><i class="bi bi-info-circle"></i>Обо мне</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Попрогал - надоело. Поиграл в игры после того, как
+                        прогать надоело. Надоело. Попрогал, потому что надоело
+                        играть после того, как прогал. To be continued...
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <div class="card p-0 mt-2">
+                <div class="card-header">
+                    <h4 class="card-title"><i class="bi bi-tools"></i>Мои навыки</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row row-cols-1 row-cols-md-2 g-4 fw-bold">
+                        <div class="col">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">HTML/CSS - 90%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 75%;"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">JavaScript - 75%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Vue/Nuxt - 60%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;"
+                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">TypeScript - 50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <section class="experience">
-                <h4>Мой опыт</h4>
-                <article class="card experience__item">
-                    <h4 class="experience__title">HTML + CSS + JS</h4>
-                    <p class="experience__content">
-                        Только HTML, CSS и JS. Ничего лишнего.
-                    </p>
-                </article>
-                <article class="card experience__item">
-                    <h4 class="experience__title">PHP</h4>
-                    <p class="experience__content">
-                        Оказывается страницы можно генерировать на сервере.
-                    </p>
-                </article>
-                <article class="card experience__item">
-                    <h4 class="experience__title">JQuery</h4>
-                    <p class="experience__content">
-                        Оказывается Javascript'ом можно пользоваться
-                        эффективнее.
-                    </p>
-                </article>
-                <article class="card experience__item">
-                    <h4 class="experience__title">Javascript >> JQuery</h4>
-                    <p class="experience__content">
-                        JQuery морально устарел и не рекомендуется к
-                        использованию в новых вебсайтах. Все функции уже
-                        есть в современном Javascript.
-                    </p>
-                </article>
-                <article class="card experience__item">
-                    <h4 class="experience__title">Nuxt 2 + Vue2</h4>
-                    <p class="experience__content">
-                        Оказывается можно использовать компоненты, вместо
-                        переписывания кучи однотипных строк кода. А еще
-                        страница может генерироваться на стороне сервера. Но
-                        это же не PHP?
-                    </p>
-                </article>
-                <article class="card experience__item">
-                    <h4 class="experience__title">Typescript</h4>
-                    <p class="experience__content">
-                        Как же удобно работать со строгой типизацией в
-                        Javascript
-                    </p>
-                </article>
-            </section>
-        </div>
+        <section class="project-section">
+            <div class="card p-0 mt-2">
+                <div class="card-header">
+                    <h4 class="card-title"><i class="bi bi-file-code"></i>Мои проекты</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 p-0">
+                                <img src="images/avatar.png" class="card-img-top" alt="Project 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Личный сайт</h5>
+                                    <p class="card-text">Сайт на котором вы сейчас находитесь. Сделан на HTML, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 p-0">
+                                <img src="images/real_news.jpg" class="card-img-top" alt="Project 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Реальные новости</h5>
+                                    <p class="card-text">Новостной бот в телеграме, который постит только реальные
+                                        новости</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 p-0">
+                                <img src="images/ryhux.jpg" class="card-img-top" alt="Project 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Ryhux</h5>
+                                    <p class="card-text">Социальная сеть на минималках на Nuxt, PHP и MySQL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="app-footer">
-        <p>
-            Представьте, что здесь находится информативный текст для футера
-        </p>
-        <nav class="app-footer__nav">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="index.html" class="menu__link">Главная</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/news.html" class="menu__link">Новости</a>
-                </li>
-                <li class="menu__item">
-                    <a href="../pages/practices.html" class="menu__link">Практики</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/goods.html" class="menu__link">Товары</a>
-                </li>
-                <li class="menu__item">
-                    <a href="pages/contacts.html" class="menu__link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+    <div class="container-fluid p-0 mt-2">
+        <footer class="bg-primary text-white py-4">
+            <div class="container">
+                <p>
+                    Представьте, что здесь находится информативный текст для футера
+                </p>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active text-white opacity-75">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/news.html" class="nav-link text-white">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/practices.html" class="nav-link text-white">Практики</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/goods.html" class="nav-link text-white">Товары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/contacts.html" class="nav-link text-white">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </footer>
 </body>
 
 </html>

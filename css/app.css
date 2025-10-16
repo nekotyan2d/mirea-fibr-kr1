@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("variables.css");
 
+/* базовые стили */
+
 html,
 body {
     margin: 0;
     background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 * {
     box-sizing: border-box;
 
-    transition: 0.2s ease-in-out all;
+    transition: 0.2s ease-in-out background, 0.2s ease-in-out padding, 0.2s ease-in-out box-shadow;
 }
 
 body {
@@ -54,6 +57,49 @@ img {
     max-width: 100%;
 }
 
+dialog {
+    border-radius: var(--border-radius);
+    border: none;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .close {
+        background: none;
+        position: absolute;
+        top: var(--padding-normal);
+        right: var(--padding-normal);
+    }
+}
+
+input,
+select {
+    border-radius: var(--border-radius);
+    outline: none;
+    height: 50px;
+    padding: 0 var(--padding-smaller);
+    border: 1.5px solid #757575;
+}
+
+textarea {
+    border-radius: var(--border-radius);
+    padding: var(--padding-smaller);
+    font-family: "Inter", sans-serif;
+    border: 1.5px solid #757575;
+    height: auto;
+    resize: none;
+}
+
+span.required {
+    color: red;
+}
+
+/* хедер */
+
 .app-header {
     width: 100%;
     background-color: var(--color-background-header);
@@ -62,6 +108,7 @@ img {
     display: flex;
     align-items: center;
     grid-area: header;
+    position: relative;
 
     .app-header__nav {
         margin: 0 auto;
@@ -81,6 +128,8 @@ img {
         }
     }
 }
+
+/* стили страницы */
 
 main {
     margin: var(--gap-normal) 0;
@@ -117,38 +166,58 @@ main {
         }
     }
 
-    .skills {
-        display: grid;
-        gap: var(--gap-normal);
-        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    .skills-section {
         width: 100%;
+        .skills {
+            display: grid;
+            gap: var(--gap-normal);
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
 
-        .skills__item {
-            padding: var(--padding-normal);
-            background-color: var(--color-accent);
-            color: white;
-            border-radius: 26px;
-            text-align: center;
+            .skills__item {
+                --skill-color: var(--color-accent);
+                padding: var(--padding-normal);
+                background-color: var(--skill-color);
+                color: white;
+                border-radius: 26px;
+                text-align: center;
 
-            &:hover {
-                box-shadow: 0 0 8px 0px var(--color-accent);
+                &:hover {
+                    box-shadow: 0 0 8px 0px var(--skill-color);
+                }
+            }
+
+            .skills__item--vue {
+                --skill-color: #42b883;
+            }
+            .skills__item--nuxt {
+                --skill-color: #00c58e;
+            }
+            .skills__item--sass {
+                --skill-color: #cc6699;
+            }
+            .skills__item--typescript {
+                --skill-color: #3178c6;
             }
         }
     }
 
-    .experience {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-normal);
+    .project-section {
         width: 100%;
 
-        .experience__item {
-            .experience__title {
-                margin: 0;
-            }
+        .projects {
+            display: grid;
+            gap: var(--gap-normal);
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
 
-            .experience__content {
-                margin: 0;
+            .project__item {
+                .project__title {
+                    margin: 0;
+                }
+
+                .project__content {
+                    margin: 0;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -207,6 +276,52 @@ main {
             .goods__add-to-cart {
                 margin: 0 var(--padding-smaller) var(--padding-smaller) var(--padding-smaller);
             }
+
+            &.goods__item--in-cart {
+                border: 1.5px solid var(--color-accent);
+
+                .goods__add-to-cart {
+                    background-color: gray;
+                    cursor: not-allowed;
+
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+            }
+
+            &.goods__item--sale {
+                position: relative;
+
+                .goods__price {
+                    text-decoration: none;
+                    color: var(--color-accent);
+
+                    &::before {
+                        content: attr(data-old-price);
+
+                        margin-right: var(--padding-smaller);
+                        text-decoration: line-through;
+                        color: red;
+                    }
+                }
+
+                &::after {
+                    content: attr(data-sale);
+                    position: absolute;
+                    top: var(--padding-normal);
+                    right: var(--padding-normal);
+                    background-color: red;
+                    color: white;
+                    padding: 4px 8px;
+                    border-radius: var(--border-radius);
+                    font-size: 0.9rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 12px 12px var(--color-box-shadow);
+            }
         }
     }
 
@@ -229,7 +344,7 @@ main {
         }
 
         .phone {
-            color: white;
+            color: var(--color-text);
             text-decoration: none;
             background-color: var(--color-accent);
             border-radius: var(--border-radius);
@@ -262,56 +377,17 @@ main {
     background-color: var(--color-background-secondary);
     border-radius: var(--border-radius);
     padding: var(--padding-larger);
-    box-shadow: 0 0 10px 0px rgb(209 209 209 / 50%);
+    box-shadow: 0 0 10px 0px var(--color-box-shadow);
 }
 
-dialog {
-    border-radius: var(--border-radius);
-    border: none;
-    max-width: 400px;
-    width: 100%;
-    position: relative;
-
-    &::backdrop {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .close {
-        background: none;
-        position: absolute;
-        top: var(--padding-normal);
-        right: var(--padding-normal);
-    }
-}
-
-input,
-select {
-    border-radius: var(--border-radius);
-    outline: none;
-    height: 50px;
-    padding: 0 var(--padding-smaller);
-    border: 1.5px solid #757575;
-}
-
-textarea {
-    border-radius: var(--border-radius);
-    padding: var(--padding-smaller);
-    font-family: "Inter", sans-serif;
-    border: 1.5px solid #757575;
-    height: auto;
-    resize: none;
-}
-
-span.required {
-    color: red;
-}
-
+/* форма обратной связи */
 .contact-us-form {
     display: flex;
     flex-direction: column;
     gap: var(--gap-normal);
 }
 
+/* футер */
 .app-footer {
     width: 100%;
     background-color: var(--color-background-footer);
@@ -339,6 +415,26 @@ span.required {
     }
 }
 
+.theme-switcher {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+    color: var(--color-text-header);
+}
+
+.theme-dark .theme-switcher .dark {
+    display: none;
+}
+
+.theme-light .theme-switcher .light {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
     .app-header,
     .app-footer {
@@ -350,7 +446,12 @@ span.required {
         }
     }
     .content {
-        .skills,
+        .skills-section .skills {
+            grid-template-columns: 1fr;
+        }
+        .project-section .projects {
+            grid-template-columns: 1fr;
+        }
         .goods {
             grid-template-columns: 1fr;
         }
