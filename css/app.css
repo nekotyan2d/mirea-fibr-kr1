@@ -276,6 +276,52 @@ main {
             .goods__add-to-cart {
                 margin: 0 var(--padding-smaller) var(--padding-smaller) var(--padding-smaller);
             }
+
+            &.goods__item--in-cart {
+                border: 1.5px solid var(--color-accent);
+
+                .goods__add-to-cart {
+                    background-color: gray;
+                    cursor: not-allowed;
+
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+            }
+
+            &.goods__item--sale {
+                position: relative;
+
+                .goods__price {
+                    text-decoration: none;
+                    color: var(--color-accent);
+
+                    &::before {
+                        content: attr(data-old-price);
+
+                        margin-right: var(--padding-smaller);
+                        text-decoration: line-through;
+                        color: red;
+                    }
+                }
+
+                &::after {
+                    content: attr(data-sale);
+                    position: absolute;
+                    top: var(--padding-normal);
+                    right: var(--padding-normal);
+                    background-color: red;
+                    color: white;
+                    padding: 4px 8px;
+                    border-radius: var(--border-radius);
+                    font-size: 0.9rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 12px 12px var(--color-box-shadow);
+            }
         }
     }
 

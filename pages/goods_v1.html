@@ -50,12 +50,12 @@
             <h2>Каталог товаров</h2>
             <p>Мы предлагаем широкий ассортимент товаров</p>
             <section class="goods">
-                <article class="card goods__item">
+                <article class="card goods__item goods__item--sale" data-sale="50%">
                     <div class="goods__image">
                         <img src="../images/cat-photo1.jpg" alt="" />
                     </div>
                     <h3 class="goods__name">Сонный кот</h3>
-                    <div class="goods__price">0₽</div>
+                    <div class="goods__price" data-old-price="100₽">50₽</div>
                     <button class="goods__add-to-cart">В корзину</button>
                 </article>
                 <article class="card goods__item">
@@ -72,6 +72,22 @@
                     </div>
                     <h3 class="goods__name">Шумный кот</h3>
                     <div class="goods__price">50₽</div>
+                    <button class="goods__add-to-cart">В корзину</button>
+                </article>
+                <article class="card goods__item goods__item--in-cart">
+                    <div class="goods__image">
+                        <img src="../images/cat-photo4.jpg" alt="" />
+                    </div>
+                    <h3 class="goods__name">Забаненый кот</h3>
+                    <div class="goods__price">500₽</div>
+                    <button class="goods__add-to-cart">В корзине</button>
+                </article>
+                <article class="card goods__item">
+                    <div class="goods__image">
+                        <img src="../images/cat-photo5.jpg" alt="" />
+                    </div>
+                    <h3 class="goods__name">Грустный кот</h3>
+                    <div class="goods__price">1000₽</div>
                     <button class="goods__add-to-cart">В корзину</button>
                 </article>
             </section>

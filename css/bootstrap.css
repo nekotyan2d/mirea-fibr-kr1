@@ -38,3 +38,55 @@ html.theme-dark {
         --bs-secondary-color: #b3b3b3 !important;
     }
 }
+
+.goods-list {
+    .goods__item {
+        &.goods__item--in-cart {
+            .card {
+                border: 1.5px solid var(--bs-primary-bg);
+            }
+
+            .goods__add-to-cart {
+                background-color: gray;
+                cursor: not-allowed;
+
+                &:hover {
+                    background-color: gray;
+                }
+            }
+        }
+
+        &.goods__item--sale {
+            position: relative;
+
+            .goods__price {
+                text-decoration: none;
+                color: var(--bs-primary);
+
+                &::before {
+                    content: attr(data-old-price);
+
+                    margin-right: calc(var(--bs-gutter-x) * 0.5);
+                    text-decoration: line-through;
+                    color: red;
+                }
+            }
+
+            &::after {
+                content: attr(data-sale);
+                position: absolute;
+                top: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+                background-color: red;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+}
