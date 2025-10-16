@@ -1,0 +1,40 @@
+.theme-switcher {
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    color: var(--color-text-header);
+}
+
+.theme-dark .theme-switcher .dark {
+    display: none;
+}
+
+.theme-light .theme-switcher .light {
+    display: none;
+}
+
+:root {
+    --bs-primary-bg: #005eff !important;
+    --bs-primary-rgb: 0, 94, 255;
+}
+
+html.theme-dark {
+    --bs-secondary-bg-rgb: 18, 18, 18;
+    --bs-secondary-bg: rgb(18, 18, 18) !important;
+
+    --bs-heading-color: #fff !important;
+    --bs-body-color: #fff !important;
+
+    .card {
+        --bs-card-bg: rgb(30, 30, 30) !important;
+        --bs-card-color: #fff !important;
+    }
+
+    .card-title {
+        --bs-card-title-color: #fff !important;
+    }
+    .text-muted {
+        --bs-secondary-color: #b3b3b3 !important;
+    }
+}
