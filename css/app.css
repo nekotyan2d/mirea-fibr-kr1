@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("variables.css");
 
+/* базовые стили */
+
 html,
 body {
     margin: 0;
     background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 * {
@@ -54,6 +57,49 @@ img {
     max-width: 100%;
 }
 
+dialog {
+    border-radius: var(--border-radius);
+    border: none;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .close {
+        background: none;
+        position: absolute;
+        top: var(--padding-normal);
+        right: var(--padding-normal);
+    }
+}
+
+input,
+select {
+    border-radius: var(--border-radius);
+    outline: none;
+    height: 50px;
+    padding: 0 var(--padding-smaller);
+    border: 1.5px solid #757575;
+}
+
+textarea {
+    border-radius: var(--border-radius);
+    padding: var(--padding-smaller);
+    font-family: "Inter", sans-serif;
+    border: 1.5px solid #757575;
+    height: auto;
+    resize: none;
+}
+
+span.required {
+    color: red;
+}
+
+/* хедер */
+
 .app-header {
     width: 100%;
     background-color: var(--color-background-header);
@@ -81,6 +127,8 @@ img {
         }
     }
 }
+
+/* стили страницы */
 
 main {
     margin: var(--gap-normal) 0;
@@ -249,7 +297,7 @@ main {
         }
 
         .phone {
-            color: white;
+            color: var(--color-text);
             text-decoration: none;
             background-color: var(--color-accent);
             border-radius: var(--border-radius);
@@ -282,56 +330,17 @@ main {
     background-color: var(--color-background-secondary);
     border-radius: var(--border-radius);
     padding: var(--padding-larger);
-    box-shadow: 0 0 10px 0px rgb(209 209 209 / 50%);
+    box-shadow: 0 0 10px 0px var(--color-box-shadow);
 }
 
-dialog {
-    border-radius: var(--border-radius);
-    border: none;
-    max-width: 400px;
-    width: 100%;
-    position: relative;
-
-    &::backdrop {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .close {
-        background: none;
-        position: absolute;
-        top: var(--padding-normal);
-        right: var(--padding-normal);
-    }
-}
-
-input,
-select {
-    border-radius: var(--border-radius);
-    outline: none;
-    height: 50px;
-    padding: 0 var(--padding-smaller);
-    border: 1.5px solid #757575;
-}
-
-textarea {
-    border-radius: var(--border-radius);
-    padding: var(--padding-smaller);
-    font-family: "Inter", sans-serif;
-    border: 1.5px solid #757575;
-    height: auto;
-    resize: none;
-}
-
-span.required {
-    color: red;
-}
-
+/* форма обратной связи */
 .contact-us-form {
     display: flex;
     flex-direction: column;
     gap: var(--gap-normal);
 }
 
+/* футер */
 .app-footer {
     width: 100%;
     background-color: var(--color-background-footer);

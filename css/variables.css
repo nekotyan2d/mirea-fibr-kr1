@@ -1,4 +1,30 @@
 :root {
+    --gap-normal: 16px;
+    --border-radius: 16px;
+    --padding-normal: 16px;
+    --padding-larger: 32px;
+    --padding-smaller: 8px;
+}
+
+html.theme-dark {
+    --color-background: #121212;
+    --color-background-secondary: #1e1e1e;
+
+    --color-background-header: #001e52;
+    --color-background-footer: #001e52;
+
+    --color-text: #fff;
+    --color-text-secondary: #b3b3b3;
+    --color-text-header: #fff;
+    --color-text-footer: #fff;
+
+    --color-accent: #005eff;
+    --color-accent-secondary: #083177;
+
+    --color-box-shadow: rgba(27, 27, 27, 0.5);
+}
+
+html.theme-light {
     --color-background: #efefef;
     --color-background-secondary: #fff;
 
@@ -13,9 +39,5 @@
     --color-accent: #005eff;
     --color-accent-secondary: #083177;
 
-    --gap-normal: 16px;
-    --border-radius: 16px;
-    --padding-normal: 16px;
-    --padding-larger: 32px;
-    --padding-smaller: 8px;
+    --color-box-shadow: rgb(209 209 209 / 50%);
 }
